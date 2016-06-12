@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/excite-bike/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"></script>
+    <script src="../src/lib.js"></script>
+
+    <style>
+        .ui-autocomplete-term { font-weight: bold; color: blue; }
+    </style>
+
+</head>
+<body>
+
+    <terminal id="terminal-1"></terminal>
+
+    <script>
+
+        var t = new Terminal(
+                [
+                    new Command("test command 1", [
+                            new Argument("Test Arg", "Test Arg")
+                    ]),
+                    new Command("test command 2", []),
+                    new Command("other command 1", [])]
+        );
+
+        t.bind("#terminal-1");
+
+    </script>
+
+</body>
+</html>
